@@ -30,4 +30,4 @@ jobs:
             sudo pip install awscli --upgrade
       - deploy:
           name: Deployment to AWS
-          command: aws s3 sync public s3://jwl.cloud/ --acl public-read --delete
+          command: aws s3 sync build s3://jwl.cloud/ --acl public-read --delete
