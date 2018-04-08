@@ -15,10 +15,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn test
-      - run: yarn build
-  deployment:
-    prod:
-      branch: master
-      commands:
-        - aws s3 public s3://jwl.cloud/ --delete
+      - run:
+          name: Test Suite
+          command: yarn test
+      - run:
+          name: Building
+          command: yarn build
+      - deploy:
+          name: Deployment to AWS
+          command: aws s3 public s3://jwl.cloud/ --delete
