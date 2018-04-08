@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "http://jwl.cloud",
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
