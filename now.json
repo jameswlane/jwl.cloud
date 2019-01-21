@@ -1,0 +1,17 @@
+{
+  "alias": [
+    "jwl.cloud",
+    "www.jwl.cloud"
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
+    }
+  ],
+  "name": "jwl.cloud",
+  "version": 2
+}
